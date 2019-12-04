@@ -71,7 +71,8 @@
 		
 		//Setup datas
 		console.log(parsed.nodes)
-		var nodesData = new vis.DataView(parsed.nodes,{})
+		var nodesData = new vis.DataSet()
+		nodesData.add(parsed.nodes);
 		const nodesView = new vis.DataView(nodesData, { filter: nodesFilter });
 		console.log(nodesView)
 
