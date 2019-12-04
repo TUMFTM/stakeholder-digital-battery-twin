@@ -1,11 +1,4 @@
 digraph "Merged Network" {
-bgcolor = "#FFFFFFFF"
-splines = "false"
-outputorder = "edgesfirst"
-esep = "0"
-pad = "2"
-node [label = "",penwidth = "1.000000",height = "0.486111",width = "2.638889",tooltip = "",color = "#000033FF",fillcolor = "#FFFFFFFF",shape = "rectangle",style = "solid,rounded,filled",fontname = "SansSerif.plain",fontsize = "17",fontcolor = "#330033FF",fixedsize = "true",labelloc = "c"]
-edge [label = "",penwidth = "2.000000",tooltip = "",arrowhead = "vee",arrowtail = "none",color = "#969696FF",fontname = "SansSerif.plain",fontsize = "12",fontcolor = "#3399FFFF",style = "solid",dir = "both"]
 "i_9§496" [label = "Info demand and orders",penwidth = "5.000000",pos = "-913.634599,1348.632332",fillcolor = "#00CCCCFF"]
 "i_8§497" [label = "Info quality of supplied cells",penwidth = "5.000000",pos = "-1364.465187,948.715564",fillcolor = "#00CCCCFF"]
 "i_7§498" [label = "Info delivery date, stock, transport",penwidth = "5.000000",pos = "-169.634915,1070.525295",fillcolor = "#00CCCCFF"]
