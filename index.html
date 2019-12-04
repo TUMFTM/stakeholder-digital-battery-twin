@@ -53,11 +53,10 @@
 	  }
 	}
 	
-
-	//jQuery.get('../latexoutput/networks/i_0.graphml.dot', function(data) {
-	//jQuery.get('https://merklel.github.io/stakeholder-digital-battery-twin/Merged_Network.dot', function(data) {
+	var DOTString;
 	jQuery.get('Merged_Network.dot', function(data) {
-    	var DOTstring = data
+		DOTstring = data
+	});
 
 	var parsed = vis.parseDOTNetwork(DOTstring);
 	console.log(parsed)
@@ -83,7 +82,7 @@
 	graph.redraw()
 	console.log(graph)
 	graph.setSize("1200", "800")
-   	});
+
   </script>
  </body>
 </html>
