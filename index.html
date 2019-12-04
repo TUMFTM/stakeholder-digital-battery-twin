@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+ <head>
+  <title>vis.js Graph demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5"></script>
+   <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            width: 600px;
+            height: 400px;
+            border: 1px solid lightgray;
+        }
+    </style>
+
+ </head>
+
+ <body>
+ 	<h1>VIS DEMO</h1>
+ <div id="graph"></div> 
+  <script type="text/javascript">
+   
+   var nodes = [
+    {id: "1_w", label: 'a'},
+    {id: 2, label: 'b'},
+    {id: 3, label: 'c'},
+   ];
+   var edges = [
+    {from: "1_w", to: 2},
+    {from: "1_w", to: 3},
+    {from: 2, to: 3},
+   ];
+   var data1 = {
+    nodes: nodes,
+    edges: edges,
+   };
+
+	
+	
+	// you can customize the result like with these options. These are explained below.
+	// These are the default options.
+	var parserOptions = {
+	  edges: {
+	    inheritColors: false
+	  },
+	  nodes: {
+	    fixed: true,
+	    parseColor: false
+	  }
+	}
+
+	// parse the gephi file to receive an object
+	// containing nodes and edges in vis format.
+	//var DOTstring = 'dinetwork {1 -> 1 -> 2; 2 -> 3; 2 -- 4; 2 -> 1 }';
+
+	//var DOTstring = "";
+	
+
+	//jQuery.get('../latexoutput/networks/i_0.graphml.dot', function(data) {
+	jQuery.get('https://github.com/merklel/stakeholder-digital-battery-twin/Merged_Network.dot', function(data) {
+    	var DOTstring = data
+
+
+	console.log(DOTstring)
+
+	var parsed = vis.parseDOTNetwork(DOTstring);
+	console.log(parsed)
+	// provide data in the normal fashion
+	var data2 = {
+	  nodes: parsed.nodes,
+	  edges: parsed.edges
+	};
+
+
+
+   var container = document.getElementById('graph');
+
+  	
+  console.log(data2)
+   var graph = new vis.Network(container, data2, {});
+   graph.redraw()
+   console.log(graph)
+   graph.setSize("1200", "800")
+
+   	});
+  </script>
+ </body>
+</html>
