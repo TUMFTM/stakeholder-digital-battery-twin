@@ -20,26 +20,19 @@
  </head>
 
  <body>
- 	<h1>VIS DEMO</h1>
- <div id="graph"></div> 
-  <script type="text/javascript">
-   
-   var nodes = [
-    {id: "1_w", label: 'a'},
-    {id: 2, label: 'b'},
-    {id: 3, label: 'c'},
-   ];
-   var edges = [
-    {from: "1_w", to: 2},
-    {from: "1_w", to: 3},
-    {from: 2, to: 3},
-   ];
-   var data1 = {
-    nodes: nodes,
-    edges: edges,
-   };
+ <h1>VIS DEMO</h1>
+	 <label>
+	  Filter nodes
+	  <select id="nodeFilterSelect">
+	    <option value>All</option>
+	    <option value="stakeholders">Stakeholders</option>
+	    <option value="actions">Actions</option>
+	    <option value="interests">Interests</option>
+	  </select>
+	</label>
 
-	
+	 <div id="graph"></div> 
+ <script type="text/javascript">
 	
 	// you can customize the result like with these options. These are explained below.
 	// These are the default options.
@@ -55,33 +48,63 @@
 	
 	var DOTString;
 	jQuery.get('Merged_Network.dot', function(data) {
-		DOTstring = data
+		const nodeFilterSelector = document.getElementById("nodeFilterSelect");
+		let nodeFilterValue = "";
+		var DOTstring = data
+		var parsed = vis.parseDOTNetwork(DOTstring);
+		console.log(parsed)
+		
+		const nodesFilter = node => {
+		  if (nodeFilterValue === "") {
+		    return true;
+		  }
+		  switch (nodeFilterValue) {
+		    case "stakeholder":
+		      return node.type === "sh";
+		    case "action":
+		      return node.type === "action";
+		    case "interest":
+		      return node.type === "interest";
+		    default:
+		      return true;
+		  }
+		};
+		
+		//Setup datas
+		const nodesView = new vis.DataView(parsed.nodes, { filter: nodesFilter });
+
+
+		// provide data in the normal fashion
+		var data2 = {
+		  //nodes: parsed.nodes,
+		  nodes: nodesView,
+		  edges: parsed.edges
+		};
+
+		var options = parsedData.options;
+		// you can extend the options like a normal JSON variable:
+		options.nodes = {
+		  color: 'red'
+		}
+		
+		nodeFilterSelector.addEventListener("change", e => {
+		  // set new value to filter variable
+		  nodeFilterValue = e.target.value;
+		  /*
+			refresh DataView,
+			so that its filter function is re-calculated with the new variable
+		      */
+		  nodesView.refresh();
+		});
+
+
+
+		var container = document.getElementById('graph');
+		var graph = new vis.Network(container, data2, options);
+		graph.redraw()
+		graph.setSize("1200", "800")
+		
 	});
-
-	var parsed = vis.parseDOTNetwork(DOTstring);
-	console.log(parsed)
-		
-	// provide data in the normal fashion
-	var data2 = {
-	  nodes: parsed.nodes,
-	  edges: parsed.edges
-	};
-		
-	var options = parsedData.options;
-	// you can extend the options like a normal JSON variable:
-	options.nodes = {
-	  color: 'red'
-	}
-
-
-   	var container = document.getElementById('graph');
-
-  	
-	console.log(data2)
-	var graph = new vis.Network(container, data2, options);
-	graph.redraw()
-	console.log(graph)
-	graph.setSize("1200", "800")
 
   </script>
  </body>
