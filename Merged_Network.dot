@@ -1,5 +1,5 @@
 digraph "Merged Network" {
-"i_9§496" [label = "Info demand and orders",penwidth = "5.000000",pos = "-913.634599,1348.632332",fillcolor = "#00CCCCFF"]
+"i_9§496" [label = "Info demand and orders",penwidth = "5.000000",pos = "-913.634599,1348.632332",fillcolor = "#00CCCCFF", type="interest"]
 "i_8§497" [label = "Info quality of supplied cells",penwidth = "5.000000",pos = "-1364.465187,948.715564",fillcolor = "#00CCCCFF"]
 "i_7§498" [label = "Info delivery date, stock, transport",penwidth = "5.000000",pos = "-169.634915,1070.525295",fillcolor = "#00CCCCFF"]
 "action_10§499" [label = "Provide date of delivery",pos = "105.926411,1381.018434",fillcolor = "#66CCFFFF"]
