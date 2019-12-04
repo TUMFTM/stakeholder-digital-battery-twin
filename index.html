@@ -52,12 +52,6 @@
 	    parseColor: false
 	  }
 	}
-
-	// parse the gephi file to receive an object
-	// containing nodes and edges in vis format.
-	//var DOTstring = 'dinetwork {1 -> 1 -> 2; 2 -> 3; 2 -- 4; 2 -> 1 }';
-
-	//var DOTstring = "";
 	
 
 	//jQuery.get('../latexoutput/networks/i_0.graphml.dot', function(data) {
@@ -65,28 +59,30 @@
 	jQuery.get('Merged_Network.dot', function(data) {
     	var DOTstring = data
 
-
-	console.log(DOTstring)
-
 	var parsed = vis.parseDOTNetwork(DOTstring);
 	console.log(parsed)
+		
 	// provide data in the normal fashion
 	var data2 = {
 	  nodes: parsed.nodes,
 	  edges: parsed.edges
 	};
+		
+	var options = parsedData.options;
+	// you can extend the options like a normal JSON variable:
+	options.nodes = {
+	  color: 'red'
+	}
 
 
-
-   var container = document.getElementById('graph');
+   	var container = document.getElementById('graph');
 
   	
-  console.log(data2)
-   var graph = new vis.Network(container, data2, {});
-   graph.redraw()
-   console.log(graph)
-   graph.setSize("1200", "800")
-
+	console.log(data2)
+	var graph = new vis.Network(container, data2, options);
+	graph.redraw()
+	console.log(graph)
+	graph.setSize("1200", "800")
    	});
   </script>
  </body>
