@@ -121,11 +121,11 @@
 		n_edges = parsed.nodes.length
 
 		for (var i = 0; i < n_nodes; i++) {
-			n = parsed.nodes[i]
 		    console.log(parsed.nodes[i]);
 
-		    if (n.type === "sh"){
-		    	n.color="#000000"
+		    if (parsed.nodes[i].type === "sh"){
+		    	parsed.nodes[i].color.background= "#99FF99FF";
+				parsed.nodes[i].color.border: "#00003396";
 		    }
 		}
 
