@@ -75,10 +75,11 @@
 		};
 		
 		//Setup datas
-		console.log(parsed.nodes)
+		//console.log(parsed.nodes)
 		var nodesData = new vis.DataSet()
 		nodesData.add(parsed.nodes);
 		const nodesView = new vis.DataView(nodesData, { filter: nodesFilter });
+    console.log("Nodes View at start:")
 		console.log(nodesView)
 
 		// provide data in the normal fashion
@@ -98,6 +99,8 @@
 			
 		  console.log("triggered!");
 		  nodesView.refresh();
+      console.log("Nodes View after refresh:")
+      console.log(nodesView)
       graph.redraw()
 		});
 		
