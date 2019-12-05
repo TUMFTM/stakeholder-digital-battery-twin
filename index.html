@@ -46,16 +46,16 @@
 	  }
 	}
 	
-	//jQuery.get('Merged_Network.dot', function(data) {
-  jQuery.get('gephi_Merged_Network.json', function(data) {
+	jQuery.get('Merged_Network.dot', function(data) {
+  //jQuery.get('gephi_Merged_Network.json', function(data) {
 		const nodeFilterSelector = document.getElementById("nodeFilterSelect");
 		let nodeFilterValue = "";
 		var DOTstring = data
 
     // Import data from DOT File
-		//var parsed = vis.parseDOTNetwork(DOTstring);
+		var parsed = vis.parseDOTNetwork(DOTstring);
     //Import data from gephi json file
-    var parsed = vis.parseGephiNetwork(DOTstring, parserOptions);
+    //var parsed = vis.parseGephiNetwork(DOTstring, parserOptions);
 		console.log(parsed)
 		
 		const nodesFilter = node => {
@@ -98,13 +98,10 @@
 			
 		  console.log("triggered!");
 		  nodesView.refresh();
+      graph.redraw()
 		});
 		
-		var options={
-      "nodes":{
-        "label": attributes.desc
-      }
-    };
+		var options={};
 
 
 
