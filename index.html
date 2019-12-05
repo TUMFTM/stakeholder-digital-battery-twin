@@ -102,12 +102,12 @@
 		      return node.type === "action";
 		    case "interests":
 		      return node.type === "interest";
-        case "interests_sh":
-          return (node.type === "interest" || node.type === "sh");
-        case "actions_sh":
-          return (node.type === "action" || node.type === "sh");
-        case "interests_actions":
-          return (node.type === "interest" || node.type === "action");
+	        case "interests_sh":
+	          return (node.type === "interest" || node.type === "sh");
+	        case "actions_sh":
+	          return (node.type === "action" || node.type === "sh");
+	        case "interests_actions":
+	          return (node.type === "interest" || node.type === "action");
 
 		    default:
 		      return true;
@@ -115,11 +115,20 @@
 		};
 		
 		//Setup datas
+
+		// Change styling in the data
+		n_nodes = parsed.nodes.length
+		n_edges = parsed.nodes.length
+
+		for (var i = 0; i < n_nodes; i++) {
+		    console.log(parsed.nodes[i]);
+		}
+
 		//console.log(parsed.nodes)
 		var nodesData = new vis.DataSet()
 		nodesData.add(parsed.nodes);
 		const nodesView = new vis.DataView(nodesData, { filter: nodesFilter });
-    console.log("Nodes View at start:")
+    	console.log("Nodes View at start:")
 		console.log(nodesView)
 
 		// provide data in the normal fashion
@@ -130,29 +139,24 @@
 		};
 		
 		nodeFilterSelector.addEventListener("change", e => {
-		  // set new value to filter variable
-		  nodeFilterValue = e.target.value;
-		  /*
-			refresh DataView,
-			so that its filter function is re-calculated with the new variable
-		      */
-			
-		  console.log("triggered!");
-		  nodesView.refresh();
-      console.log("Nodes View after refresh:")
-      console.log(nodesView)
-      console.log("Nodes Filter Value:")
-      console.log(nodeFilterValue)
-      graph.redraw()
+		// set new value to filter variable
+		nodeFilterValue = e.target.value;
+
+
+		console.log("triggered!");
+		nodesView.refresh();
+		console.log("Nodes View after refresh:")
+		console.log(nodesView)
+		console.log("Nodes Filter Value:")
+		console.log(nodeFilterValue)
+		graph.redraw()
 		});
-		
+
 		var options={
 			nodes:{
-				shape: "box",
-				borderRadius: 6
+				shape: "box"
 			}
 		};
-
 
 
 		var container = document.getElementById('graph');
