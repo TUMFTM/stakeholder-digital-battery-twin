@@ -28,6 +28,9 @@
 	    <option value="stakeholders">Stakeholders</option>
 	    <option value="actions">Actions</option>
 	    <option value="interests">Interests</option>
+      <option value="interests_sh">Interests and Stakeholders</option>
+      <option value="actions_sh">Actions and Stakeholders</option>
+      <option value="interests_actions">Interests and Actions</option>
 	  </select>
 	</label>
 
@@ -69,6 +72,13 @@
 		      return node.type === "action";
 		    case "interests":
 		      return node.type === "interest";
+        case "interests_sh":
+          return (node.type === "interest" || node.type === "sh");
+        case "actions_sh":
+          return (node.type === "actions" || node.type === "sh");
+        case "interests_actions":
+          return (node.type === "interest" || node.type === "actions");
+
 		    default:
 		      return true;
 		  }
