@@ -2,6 +2,7 @@
 <html>
  <head>
   <title>vis.js Graph demo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/p5"></script>
    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -20,22 +21,51 @@
  </head>
 
  <body>
- <h1>VIS DEMO</h1>
+ <h1>Stakeholder Digital Battery Twin</h1>
+ <p class="container_text">
+  <b>Abstract</b><br>
+  During the work on the below mentioned paper, a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository.<br>
+  <br>
+  In the below graph, we show the complete dataset including relations between stakeholders their interests and their actions. Furtheron, actions can have pre-actions which are mandatory in order to fulfill the first one.
+
+  <br>
+  <br>
+  <b>Legend</b><br>
+  light green: Stakeholders<br>
+  dark green: Interests of the stakeholders<br>
+  blue: Actions of the stakeholders<br>
+  Stakeholders and their respective actions/interests are connected by dashed arows. Interests, Actions and pre-actions are connected using full arrows.
+  <br>
+  <br>
+  <b>Technical University of Munich</b><br>
+  <b>Authors:</b> Merkle, Moers<br>
+  <b>DOI:</b> 10.123123.efgthrth<br>
+
+ </p>
+
 	 <label>
 	  Filter nodes
 	  <select id="nodeFilterSelect">
-	    <option value>All</option>
-	    <option value="stakeholders">Stakeholders</option>
-	    <option value="actions">Actions</option>
-	    <option value="interests">Interests</option>
-      <option value="interests_sh">Interests and Stakeholders</option>
-      <option value="actions_sh">Actions and Stakeholders</option>
-      <option value="interests_actions">Interests and Actions</option>
+      <optgroup label="Relations">
+  	    <option value>All</option>
+        <option value="interests_sh">Interests and Stakeholders</option>
+        <option value="actions_sh">Actions and Stakeholders</option>
+        <option value="interests_actions">Interests and Actions</option>
+      </optgroup>
+      <optgroup label="Single Nodes">
+        <option value="stakeholders">Only Stakeholders</option>
+        <option value="actions">Only Actions</option>
+        <option value="interests">Only Interests</option>
+      </optgroup>
 	  </select>
 	</label>
 
-	 <div id="graph"></div> 
+	 <div id="graph", class="container_network"></div> 
+	 <p class="container_text">
+	 	We used <a href="https://visjs.org/">vis.js</a> to plot the network.
+	 </p>
  <script type="text/javascript">
+
 	
 	// you can customize the result like with these options. These are explained below.
 	// These are the default options.
