@@ -75,9 +75,9 @@
         case "interests_sh":
           return (node.type === "interest" || node.type === "sh");
         case "actions_sh":
-          return (node.type === "actions" || node.type === "sh");
+          return (node.type === "action" || node.type === "sh");
         case "interests_actions":
-          return (node.type === "interest" || node.type === "actions");
+          return (node.type === "interest" || node.type === "action");
 
 		    default:
 		      return true;
