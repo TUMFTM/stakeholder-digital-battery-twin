@@ -1,4 +1,7 @@
 # Dataset of Stakeholdernalyses of digital battery twin
+
+![header_img](images/network.png)
+
 During the work on the below mentioned paper, a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository. 
 
 Following the link, you will get to a website showing the whole dataset in a vis.js graph.
