@@ -20,54 +20,77 @@
 
  </head>
 
- <body>
- <h1>Stakeholder Digital Battery Twin</h1>
- <p class="container_text">
-  <b>Abstract</b><br>
-  During the work on the below mentioned paper, a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository.<br>
-  <br>
-  In the below graph, we show the complete dataset including relations between stakeholders their interests and their actions. Furtheron, actions can have pre-actions which are mandatory in order to fulfill the first one.
+<body>
+	<h1>Stakeholder Digital Battery Twin</h1>
+	<p class="container_text">
+		<b>Abstract</b><br>
+		During the work on the below mentioned paper, a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository.<br>
+		<br>
+		In the below graph, we show the complete dataset including relations between stakeholders their interests and their actions. Furtheron, actions can have pre-actions which are mandatory in order to fulfill the first one.
 
-  <br>
-  <br>
-  <b>Legend</b><br>
-  light green: Stakeholders<br>
-  dark green: Interests of the stakeholders<br>
-  blue: Actions of the stakeholders<br>
-  Stakeholders and their respective actions/interests are connected by dashed arows. Interests, Actions and pre-actions are connected using full arrows.
-  <br>
-  <br>
-  <b>Technical University of Munich</b><br>
-  <b>Authors:</b> Merkle, Moers<br>
-  <b>DOI:</b> 10.123123.efgthrth<br>
+		<br>
+		<br>
+		<b>Legend</b><br>
+		light green: Stakeholders<br>
+		dark green: Interests of the stakeholders<br>
+		blue: Actions of the stakeholders<br>
+		Stakeholders and their respective actions/interests are connected by dashed arows. Interests, Actions and pre-actions are connected using full arrows.
+		<br>
+		<br>
+		<b>Technical University of Munich</b><br>
+		<b>Authors:</b> Merkle, Moers<br>
+		<b>DOI:</b> 10.123123.efgthrth<br>
+	</p>
 
- </p>
 
-	 <label>
-	  Filter nodes
-	  <select id="nodeFilterSelect">
-      <optgroup label="Relations">
-  	    <option value>All</option>
-        <option value="interests_sh">Interests and Stakeholders</option>
-        <option value="actions_sh">Actions and Stakeholders</option>
-        <option value="interests_actions">Interests and Actions</option>
-      </optgroup>
-      <optgroup label="Single Nodes">
-        <option value="stakeholders">Only Stakeholders</option>
-        <option value="actions">Only Actions</option>
-        <option value="interests">Only Interests</option>
-      </optgroup>
-	  </select>
-	</label>
+	<div id="loader" class="loader" style="display:block">
+		Please be patient, graph is loading...<br><br>
+		<div class="duo duo1">
+			<div class="dot dot-a"></div>
+			<div class="dot dot-b"></div>
+		</div>
+			<div class="duo duo2">
+			<div class="dot dot-a"></div>
+			<div class="dot dot-b"></div>
+		</div>
+	</div>
 
-	 <div id="graph", class="container_network"></div> 
-	 <p class="container_text">
-	 	We used <a href="https://visjs.org/">vis.js</a> to plot the network.
-	 </p>
+	<div class="container_network">
+		<label>
+			Filter nodes
+			<select id="nodeFilterSelect">
+				<optgroup label="Relations">
+					<option value>All</option>
+					<option value="interests_sh">Interests and Stakeholders</option>
+					<option value="actions_sh">Actions and Stakeholders</option>
+					<option value="interests_actions">Interests and Actions</option>
+				</optgroup>
+					<optgroup label="Single Nodes">
+					<option value="stakeholders">Only Stakeholders</option>
+					<option value="actions">Only Actions</option>
+					<option value="interests">Only Interests</option>
+				</optgroup>
+			</select>
+		</label>
+		<p id="current_filter_setting">You do not have a node selected.</p>
+	</div>
+
+
+	<div id="graph" class="container_network"></div> 
+	<div style="display:none; visibility: hidden" id="graph2", class="container_network"></div> 
+	<p class="container_text">
+		We used <a href="https://visjs.org/">vis.js</a> to plot the network.
+	</p>
  <script type="text/javascript">
 
 	function edge_chosen_callback(values, id, selected, hovering){
 		values.toArrow = true;
+	}
+
+	function drawing_complete(){
+		console.log("drawing ended!")
+		var x = document.getElementById("loader");
+		x.style.display = "none";
 	}
 
 
@@ -99,36 +122,51 @@
 		// Nodes FIlder for drop down menu
 		const nodesFilter = node => {
 
+			var flag_root_id = true;
+			var flag_nodeFilterValue = true;
+
 			// root id to swtich clicked on nodes
 			if (root_id != ""){
 				//if (root_id === node.id){
 				if (root_id.includes(node.id)){
-					return true;
+					flag_root_id = true;
 				}else{
-					return false;
+					flag_root_id = false;
 				}
+			}else{ // root_id == "" <-- not filtering anything by on click
+				flag_root_id=true;
 			}
 
 			// nodeFilterValue to swtich drop down
 			if (nodeFilterValue === "") {
-			return true;
+			flag_nodeFilterValue =  true;
 			}
 			switch (nodeFilterValue) {
 			case "stakeholders":
-			  return node.type === "sh";
+			  flag_nodeFilterValue = (node.type === "sh");
+			  break;
 			case "actions":
-			  return node.type === "action";
+			  flag_nodeFilterValue = (node.type === "action");
+			  break;
 			case "interests":
-			  return node.type === "interest";
+			  flag_nodeFilterValue = (node.type === "interest");
+			  break;
 			case "interests_sh":
-			  return (node.type === "interest" || node.type === "sh");
+			  flag_nodeFilterValue = (node.type === "interest" || node.type === "sh");
+			  break;
 			case "actions_sh":
-			  return (node.type === "action" || node.type === "sh");
+			  flag_nodeFilterValue = (node.type === "action" || node.type === "sh");
+			  break;
 			case "interests_actions":
-			  return (node.type === "interest" || node.type === "action");
+			  flag_nodeFilterValue = (node.type === "interest" || node.type === "action");
+			  break;
 			default:
-			  return true;
+			  	flag_nodeFilterValue = true;
 			}
+
+			// console.log("bool filter: ", flag_root_id, flag_nodeFilterValue,root_id, nodeFilterValue, node.type)
+
+			return flag_root_id && flag_nodeFilterValue
 			};
 
 		// Nodes Filter for on_click
@@ -200,6 +238,11 @@
     	console.log("Nodes View at start:")
 		console.log(nodesView)
 
+		// static fashion without filtering
+		var data1 = {
+		  nodes: parsed.nodes,
+		  edges: parsed.edges
+		};
 		// provide data in the normal fashion
 		var data2 = {
 		  //nodes: parsed.nodes,
@@ -231,18 +274,31 @@
 				}
 		};
 
+		function get_label_from_node_id(id){
+			for (var i = 0; i < n_nodes; i++) {	
+
+		    	if (parsed.nodes[i].id === id){
+		    		return parsed.nodes[i].label;
+		    	}
+		    }
+		}
 		
+
 		function on_click(obj){
 			console.log("on click fired!")
 			console.log(obj)
 			if (obj.nodes.length > 0){
 				root_id = [obj.nodes[0]]
-				root_id =root_id.concat(graph.getConnectedNodes(obj.nodes[0], 'from'))
-				root_id =root_id.concat(graph.getConnectedNodes(obj.nodes[0], 'to'))
+				// var temp_graph = new vis.Network(container, data2, options);
+				root_id =root_id.concat(graph_2.getConnectedNodes(obj.nodes[0], 'from'))
+				root_id =root_id.concat(graph_2.getConnectedNodes(obj.nodes[0], 'to'))
 				nodesView.refresh()
 				graph.redraw()
+
+				document.getElementById("current_filter_setting").innerHTML = "You have selected the node <i><b>" + get_label_from_node_id(root_id[0]) + ".</i></b>";
 			}else{
 				root_id=""
+				document.getElementById("current_filter_setting").innerHTML = "You do not have a node selected.";
 				nodesView.refresh()
 				graph.redraw()
 			}
@@ -251,7 +307,10 @@
 
 		var container = document.getElementById('graph');
 		var graph = new vis.Network(container, data2, options);
+		var container2 = document.getElementById('graph2');
+		var graph_2 = new vis.Network(container2,data1, options);
 		graph.on("click", on_click)
+		graph.on("afterDrawing", drawing_complete)
 		graph.redraw()
 		// graph.setSize("1200", "800")
 		
