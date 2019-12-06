@@ -1,4 +1,4 @@
-# Dataset of Stakeholdernalyses of digital battery twin
+# Dataset of Stakeholder Analyses of Digital Battery Twin
 
 ![header_img](images/network.png)
 
@@ -13,8 +13,6 @@ Following the link, you will get to a website showing the whole dataset in a vis
 Paper will be linked here when published.
 
 ## Contact
-[Lukas Merkle](https://www.ftm.mw.tum.de/en/institute/staff/smarte-mobilitaet/lukas-merkle-msc/lukas-merkle-m-sc/)
-
-[Institute of Atuomotive Technology](https://www.ftm.mw.tum.de/en/home/)
-
+[Lukas Merkle](https://www.ftm.mw.tum.de/en/institute/staff/smarte-mobilitaet/lukas-merkle-msc/lukas-merkle-m-sc/)  
+[Institute of Atuomotive Technology](https://www.ftm.mw.tum.de/en/home/)  
 Technical University of Munich
