@@ -14,5 +14,6 @@ Paper will be linked here when published.
 
 ## Contact
 [Lukas Merkle](https://www.ftm.mw.tum.de/en/institute/staff/smarte-mobilitaet/lukas-merkle-msc/lukas-merkle-m-sc/)  
+lukas.merkle@tum.de  
 [Institute of Automotive Technology](https://www.ftm.mw.tum.de/en/home/)  
 Technical University of Munich
