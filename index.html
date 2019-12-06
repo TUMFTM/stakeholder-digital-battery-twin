@@ -84,7 +84,8 @@
 		<b> Hint to read the relations</b><br>
 		<span style="background-color:#58D68D;font-weight:normal;border-style: dashed;border-color: #000000;border-radius: 2px;border-width: 1px;">Stakeholder X</span>  &#8674; is interested in &#8674; <span style="background-color:#17A589;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Interest Y</span><br>
 		<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span>  &#8674; can be delivered by &#8674; <span style="background-color:#58D68D;font-weight:normal;border-style: dashed;border-color: #000000;border-radius: 2px;border-width: 1px;">Stakeholder X</span><br>
-		<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action X</span> &#129030; is needed by &#129030; <span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span><br>
+		<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action X</span> &#129030; needs &#129030; <span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span><br>
+		<span style="background-color:#17A589;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Interest Y</span> &#129030; needs &#129030;<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span><br>
 	</div> 
 	<p class="container_text">
 		We use <a href="https://visjs.org/">vis.js</a> to plot the network.
@@ -255,6 +256,10 @@
 			// from a to a
 			if ((parsed.edges[i].from.slice(0,2) === "ac") && (parsed.edges[i].to.slice(0,2) === "ac")){
 				parsed.edges[i].label=undefined;
+			}
+			//from a to sh
+			if ((parsed.edges[i].from.slice(0,2) === "ac") && ((parsed.edges[i].to.slice(0,2) != "i_") && (parsed.edges[i].to.slice(0,2) != "ac"))){
+				parsed.edges[i].dashes=true;
 			}
 		}
 
