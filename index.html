@@ -38,7 +38,7 @@
 
 
 	<div id="loader" class="loader" style="display:block">
-		Please be patient, graph is loading...<br><br>
+		Please be patient, network is loading...<br><br>
 		<center>
 		<div class="duo duo1">
 			<div class="dot dot-a"></div>
@@ -73,8 +73,8 @@
 					<option value="interests">Only Interests</option>
 				</optgroup>
 			</select>
-		</label>
-		<p id="current_filter_setting">You do not have a node selected.</p>
+		</label><button type="button" id="button_center_nw">Fit Network</button>
+		<p id="current_filter_setting">You do not have a node selected.</p> 
 	</div>
 
 
@@ -87,6 +87,16 @@
 
 	function edge_chosen_callback(values, id, selected, hovering){
 		values.toArrow = true;
+	}
+
+	function node_chosen_callback(values, id, selected, hovering){
+		console.log(id)
+		if ((id.slice(0,2) != "ac") && (id.slice(0,2) != "i_")){
+			values.color = "#48e68b";
+		}
+		if (id.slice(0,2) == "i_"){
+			values.color = "#12846e";
+		}
 	}
 
 	function drawing_complete(){
@@ -113,16 +123,16 @@
 	}
 	
 	jQuery.get('Merged_Network.dot', function(data) {
-  //jQuery.get('gephi_Merged_Network.json', function(data) {
 		const nodeFilterSelector = document.getElementById("nodeFilterSelect");
+		const button_center_nw = document.getElementById("button_center_nw");
 		var root_id=""
 		let nodeFilterValue = "";
 		var DOTstring = data
 
-    // Import data from DOT File
+    	// Import data from DOT File
 		var parsed = vis.parseDOTNetwork(DOTstring);
-    //Import data from gephi json file
-    //var parsed = vis.parseGephiNetwork(DOTstring, parserOptions);
+    	//Import data from gephi json file
+    	//var parsed = vis.parseGephiNetwork(DOTstring, parserOptions);
 		console.log(parsed)
 		
 		// Nodes FIlder for drop down menu
@@ -196,6 +206,9 @@
 				parsed.nodes[i].shapeProperties = {
 					borderDashes:true
 				};
+				parsed.nodes[i].chosen={
+					node: node_chosen_callback
+				}
 		    }
 		    if (parsed.nodes[i].type === "action"){
 		    	parsed.nodes[i].color.background= "#A9CCE3";
@@ -204,6 +217,9 @@
 		    if (parsed.nodes[i].type === "interest"){
 		    	parsed.nodes[i].color.background= "#17A589";
 		    	parsed.nodes[i].color.border="#000000";
+		    	parsed.nodes[i].chosen={
+					node: node_chosen_callback
+				}
 		    }
 		    console.log(parsed.nodes[i]);
 		}
@@ -256,6 +272,14 @@
 		  edges: parsed.edges
 		};
 		
+
+		// callbacl button fit nw
+		button_center_nw.addEventListener("click", e =>{
+			console.log("button_center_nw triggered!");
+
+			graph.fit()
+		});
+
 		// CAllback for filder nodes by the drop down menu
 		nodeFilterSelector.addEventListener("change", e => {
 			// set new value to filter variable
@@ -269,15 +293,31 @@
 			console.log("Nodes Filter Value:")
 			console.log(nodeFilterValue)
 			graph.redraw()
-			});
+		});
 
-			var options={
-				autoResize: true,
-				  height: "900px",
-	  				width: '100%',
-				nodes:{
-					shape: "box"
-				}
+
+		var options={
+			autoResize: true,
+			  height: "900px",
+  				width: '100%',
+			nodes:{
+				shape: "box"
+			},
+			physics:{
+				solver: "forceAtlas2Based",
+				minVelocity: 0.5,
+				forceAtlas2Based: {
+					springLength: 50,
+					springConstant: 0.2,
+					damping: 0.4
+				},	
+				barnesHut:{
+					gravitationalConstant: -5000,
+					damping: 1,
+					springLength: 90
+				},
+				stabilization: false
+			}
 		};
 
 		function get_label_from_node_id(id){
@@ -301,7 +341,7 @@
 				nodesView.refresh()
 				graph.redraw()
 
-				document.getElementById("current_filter_setting").innerHTML = "You have selected the node <i><b>" + get_label_from_node_id(root_id[0]) + ".</i></b>";
+				document.getElementById("current_filter_setting").innerHTML = "You have selected the node <i><b>" + get_label_from_node_id(root_id[0]) + ".</i></b> Click empty space to release!";
 			}else{
 				root_id=""
 				document.getElementById("current_filter_setting").innerHTML = "You do not have a node selected.";
