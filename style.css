@@ -38,8 +38,7 @@ h1 {
   height: 20px;
   width: 50px;
   background: hsla(0, 0%, 0%, 0.0);
-  position: absolute;
-  
+  position: absolute;  
 }
 
 .duo, .dot {

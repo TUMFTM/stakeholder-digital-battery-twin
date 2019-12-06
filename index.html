@@ -45,6 +45,7 @@
 
 	<div id="loader" class="loader" style="display:block">
 		Please be patient, graph is loading...<br><br>
+		<center>
 		<div class="duo duo1">
 			<div class="dot dot-a"></div>
 			<div class="dot dot-b"></div>
@@ -53,9 +54,10 @@
 			<div class="dot dot-a"></div>
 			<div class="dot dot-b"></div>
 		</div>
+	</center>
 	</div>
 
-	<div class="container_network">
+	<div id="filters" class="container_network" style="display:none">
 		<label>
 			Filter nodes
 			<select id="nodeFilterSelect">
@@ -76,10 +78,10 @@
 	</div>
 
 
-	<div id="graph" class="container_network"></div> 
+	<div id="graph" class="container_network" style="display:block"></div> 
 	<div style="display:none; visibility: hidden" id="graph2", class="container_network"></div> 
 	<p class="container_text">
-		We used <a href="https://visjs.org/">vis.js</a> to plot the network.
+		We use <a href="https://visjs.org/">vis.js</a> to plot the network.
 	</p>
  <script type="text/javascript">
 
@@ -91,6 +93,10 @@
 		console.log("drawing ended!")
 		var x = document.getElementById("loader");
 		x.style.display = "none";
+		//var y = document.getElementById("graph");
+		//y.style.display = "block";
+		var z = document.getElementById("filters");
+		z.style.display = "block";
 	}
 
 
