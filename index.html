@@ -80,6 +80,12 @@
 
 	<div id="graph" class="container_network" style="display:block"></div> 
 	<div style="display:none; visibility: hidden" id="graph2", class="container_network"></div> 
+	<div style="display:none;" id="hint_to_read", class="container_network">
+		<b> Hint to read the relations</b><br>
+		<span style="background-color:#58D68D;font-weight:normal;border-style: dashed;border-color: #000000;border-radius: 2px;border-width: 1px;">Stakeholder X</span>  &#8674; is interested in &#8674; <span style="background-color:#17A589;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Interest Y</span><br>
+		<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span>  &#8674; can be delivered by &#8674; <span style="background-color:#58D68D;font-weight:normal;border-style: dashed;border-color: #000000;border-radius: 2px;border-width: 1px;">Stakeholder X</span><br>
+		<span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action X</span> &#129030; is needed by &#129030; <span style="background-color:#A9CCE3;font-weight:normal;border-style: solid; border-color: #000000;border-radius: 2px;border-width: 1px;">Action Y</span><br>
+	</div> 
 	<p class="container_text">
 		We use <a href="https://visjs.org/">vis.js</a> to plot the network.
 	</p>
@@ -103,8 +109,8 @@
 		console.log("drawing ended!")
 		var x = document.getElementById("loader");
 		x.style.display = "none";
-		//var y = document.getElementById("graph");
-		//y.style.display = "block";
+		var y = document.getElementById("hint_to_read");
+		y.style.display = "block";
 		var z = document.getElementById("filters");
 		z.style.display = "block";
 	}
