@@ -1,0 +1,390 @@
+graph "G_all.graphml" {
+bgcolor = "#FFFFFFFF"
+splines = "false"
+outputorder = "edgesfirst"
+esep = "0"
+pad = "2"
+node [label = "",penwidth = "0.000000",height = "0.486111",width = "2.083333",tooltip = "",color = "#CCCCCCFF",fillcolor = "#89D0F5FF",shape = "rectangle",style = "solid,rounded,filled",fontname = "SansSerif.plain",fontsize = "12",fontcolor = "#000000FF",fixedsize = "true",labelloc = "c"]
+edge [label = "",penwidth = "2.000000",tooltip = "",arrowhead = "none",arrowtail = "none",color = "#848484FF",fontname = "Dialog.plain",fontsize = "10",fontcolor = "#000000FF",style = "solid",dir = "both"]
+"action_12§62" [label = "Provide info used materials of cells",pos = "244.381966,-72.068708",fillcolor = "#FF6666FF"]
+"i_0§63" [pos = "-328.183128,-166.372480"]
+"Cell Manufacturer§64" [label = "Cell Manufacturer",pos = "-151.908683,-380.618574"]
+"Recycling-/Reuse company§65" [label = "Recycling-/Reuse company",pos = "-112.819816,381.018084"]
+"Government§66" [label = "Government",pos = "-565.953468,388.660875"]
+"action_2§67" [label = "Provide info cell performance, geometry, basic properties",pos = "-161.118461,329.547564",fillcolor = "#FF6666FF"]
+"i_1§68" [pos = "236.515511,756.930929"]
+"Battery System Manufacturer§69" [label = "Battery System Manufacturer",pos = "179.921212,142.300432"]
+"OEM§70" [label = "OEM",pos = "164.525277,221.480608"]
+"action_14§71" [label = "Provide customer wishes",pos = "143.385567,-136.062056"]
+"action_29§72" [label = "Provide fleet mobility behaviour",pos = "255.252999,88.844805"]
+"i_2§73" [pos = "-418.279014,2.454668"]
+"action_13§74" [label = "Provide data from the use-phase",pos = "-118.048576,-365.715376",fillcolor = "#FF6666FF"]
+"Car Owner§75" [label = "Car Owner",pos = "-326.707115,219.629290"]
+"Car dealership§76" [label = "Car dealership",pos = "-327.447837,-485.273848"]
+"Car Rental Service§77" [label = "Car Rental Service",pos = "488.892830,-508.929365"]
+"Car-Sharing Company§78" [label = "Car-Sharing Company",pos = "490.010994,-500.695478"]
+"Fleet Operator§79" [label = "Fleet Operator",pos = "-292.637535,244.323503"]
+"Car Leasing Provider§80" [label = "Car Leasing Provider",pos = "-286.046165,234.307634"]
+"Charge-Service-Vendors§81" [label = "Charge-Service-Vendors",pos = "-4.277458,336.408770"]
+"Insurance§82" [label = "Insurance",pos = "-418.131980,-557.706221"]
+"Automobile Association§83" [label = "Automobile Association",pos = "118.865426,323.484240"]
+"Households§84" [label = "Households",pos = "478.400277,-495.373457"]
+"Energy Supplier§85" [label = "Energy Supplier",pos = "-290.252250,254.306841"]
+"action_15§86" [label = "Provide info designed space to battery systems manufacturer",pos = "231.814644,-384.845137"]
+"i_3§87" [pos = "723.814949,-89.616621"]
+"action_41§88" [label = "Save and aggregate data from the use phase",pos = "-51.281486,-323.690962"]
+"i_4§89" [pos = "-471.006706,115.519121"]
+"i_6§90" [pos = "340.751351,691.229845"]
+"Car Workshop§91" [label = "Car Workshop",pos = "-176.015495,494.052996"]
+"action_10§92" [label = "Provide date of delivery",pos = "168.770089,150.982378"]
+"action_31§93" [label = "Provide location state, live status, tracking",pos = "-156.107597,-371.724531"]
+"i_7§94" [pos = "-422.617515,155.437029"]
+"Transport Service§95" [label = "Transport Service",pos = "-704.464336,-539.171431"]
+"action_11§96" [label = "Provide info manufacturing process of cells",pos = "-346.100486,188.450335"]
+"i_8§97" [pos = "-4.040397,700.091150"]
+"i_10§98" [pos = "-483.345695,79.179644"]
+"Vendor Aging-Quicktest§99" [label = "Vendor Aging-Quicktest",pos = "-993.983726,-200.920393"]
+"Gas-Stations§100" [label = "Gas-Stations",pos = "-607.145637,-498.234297"]
+"action_37§101" [label = "Provide simulations of (parts of) the battery system",pos = "-233.556083,392.866930",fillcolor = "#FF6666FF"]
+"action_38§102" [label = "Provide current state battery system",pos = "280.005867,109.168779"]
+"i_11§103" [pos = "-108.749870,-282.522139"]
+"action_1§104" [label = "Create (3D-)Models und simulations and data",pos = "309.394905,489.384203",fillcolor = "#FF6666FF"]
+"action_8§105" [label = "Provide info cell contacting",pos = "174.001839,-245.344587",fillcolor = "#FF6666FF"]
+"action_9§106" [label = "Provide info kind of housing",pos = "-251.601951,483.788652",fillcolor = "#FF6666FF"]
+"action_36§107" [label = "Provide info topology system e.g. connection of modules",pos = "-274.736229,493.322252",fillcolor = "#FF6666FF"]
+"General Service Vendor (e.g. TUEV)§108" [label = "General Service Vendor (e.g. TUEV)",pos = "6.890633,414.510576"]
+"Second Hand Car Vendor§109" [label = "Second Hand Car Vendor",pos = "477.739266,-519.803511"]
+"Second Hand Car Buyer§110" [label = "Second Hand Car Buyer",pos = "459.896004,-537.056440"]
+"Mediator§111" [label = "Mediator",pos = "435.398812,-583.036299"]
+"action_3§112" [label = "Provide info of current production",pos = "753.756112,193.788103",fillcolor = "#FF6666FF"]
+"i_12§113" [pos = "430.159066,-331.252729"]
+"i_13§114" [pos = "311.526864,27.526140"]
+"i_14§115" [pos = "175.423836,-867.888838"]
+"action_17§116" [label = "Info selling conditions and current offers",pos = "496.923470,-270.339644"]
+"action_27§117" [label = "Independent info performance of new cars",pos = "473.456185,-112.810591"]
+"action_28§118" [label = "Independent info performance of used cars",pos = "-412.428550,185.706621"]
+"i_15§119" [pos = "-82.651359,-337.395918"]
+"i_16§120" [pos = "-721.275489,-209.213606"]
+"i_17§121" [pos = "-12.647331,-274.693403"]
+"action_4§122" [label = "Provide installation instructions",pos = "66.250679,-491.610518"]
+"action_6§123" [label = "Provide repair instructions and service advise",pos = "706.206673,436.186449"]
+"i_18§124" [pos = "246.227303,97.675310"]
+"action_7§125" [label = "Provide original spare parts",pos = "124.895760,-476.948286"]
+"i_20§126" [pos = "257.684212,96.188372"]
+"i_22§127" [pos = "274.800789,269.421190"]
+"action_26§128" [label = "Early declaration of recycling process to optimize engineering",pos = "220.783699,-146.093733"]
+"i_24§129" [pos = "228.789498,464.738817"]
+"action_34§130" [label = "Legislation of battery re-use",pos = "45.241829,441.255449",fillcolor = "#FF6666FF"]
+"action_24§131" [label = "Distribution info insurance-contracts",pos = "293.900155,-590.985518"]
+"i_25§132" [pos = "-267.605705,-344.416792"]
+"action_35§133" [label = "Info cutting edge technology battery systems",pos = "256.466683,715.382174"]
+"i_26§134" [pos = "744.650399,368.777330"]
+"action_16§135" [label = "Live quality state of delivered battery systems",pos = "241.818001,470.396624"]
+"i_27§136" [pos = "-377.622398,500.427446"]
+"i_28§137" [pos = "-372.941703,-70.791670"]
+"action_42§138" [label = "Statistics about failure of components",pos = "-254.167442,340.024248"]
+"i_29§139" [pos = "106.708626,810.963461"]
+"Wholesaler§140" [label = "Wholesaler",pos = "-503.873405,839.283716"]
+"i_31§141" [pos = "608.355233,579.767595"]
+"action_20§142" [label = "Provide info charging technology",pos = "-250.913536,-210.320723"]
+"i_32§143" [pos = "-598.198005,248.400713"]
+"action_25§144" [label = "Provide individual mobility behaviour",pos = "265.052132,171.125017"]
+"i_33§145" [pos = "-59.180595,-284.689009"]
+"Data-Collector§146" [label = "Data-Collector",pos = "126.435738,-857.030806"]
+"Hacker and Criminals§147" [label = "Hacker and Criminals",pos = "199.315194,-848.335859"]
+"i_34§148" [pos = "-377.472740,-90.593184"]
+"i_35§149" [pos = "273.569832,99.525774"]
+"action_0§150" [label = "Offering of snapshot ageing state of battery system",pos = "-426.136711,-91.441511"]
+"action_23§151" [label = "Provide demand SL-battery systems. Needed performance as stationary storage",pos = "-198.218742,-302.020796"]
+"i_36§152" [pos = "260.801949,77.461321"]
+"action_33§153" [label = "Transparent and central documentation of workshop work-result",pos = "375.001473,649.425775"]
+"i_37§154" [pos = "295.213021,59.930437"]
+"i_38§155" [pos = "-506.051933,22.891558"]
+"Rescue Service§156" [label = "Rescue Service",pos = "-983.551399,-331.364668"]
+"i_39§157" [pos = "-580.734214,17.426409"]
+"i_40§158" [pos = "178.862862,17.763384"]
+"i_41§159" [pos = "777.962532,114.329485"]
+"i_42§160" [pos = "437.693489,-420.113691"]
+"action_30§161" [label = "Provide fake and defective and manipulative data which manipulates the cloud data",pos = "501.654671,-297.558882"]
+"i_44§162" [pos = "-101.651359,-315.891768"]
+"i_45§163" [pos = "774.005501,84.356279"]
+"action_32§164" [label = "Provide sensor data during transport: temperature, shocks, humidity",pos = "-759.527085,20.281694"]
+"i_46§165" [pos = "-268.679649,-284.950605"]
+"action_22§166" [label = "Info status and location charging infrastructure",pos = "-571.298545,115.385149"]
+"i_47§167" [pos = "-164.831291,-313.959517"]
+"action_12§62" -- "Cell Manufacturer§64" 
+"i_0§63" -- "action_12§62" 
+"Cell Manufacturer§64" -- "i_4§89" 
+"Cell Manufacturer§64" -- "i_10§98" 
+"Cell Manufacturer§64" -- "i_12§113" 
+"Cell Manufacturer§64" -- "i_13§114" 
+"Cell Manufacturer§64" -- "i_14§115" 
+"Cell Manufacturer§64" -- "i_37§154" 
+"Cell Manufacturer§64" -- "i_42§160" 
+"Recycling-/Reuse company§65" -- "i_0§63" 
+"Recycling-/Reuse company§65" -- "i_11§103" 
+"Recycling-/Reuse company§65" -- "i_13§114" 
+"Recycling-/Reuse company§65" -- "i_34§148" 
+"Government§66" -- "i_0§63" 
+"action_2§67" -- "action_12§62" 
+"action_2§67" -- "Cell Manufacturer§64" 
+"i_1§68" -- "action_2§67" 
+"Battery System Manufacturer§69" -- "i_1§68" 
+"Battery System Manufacturer§69" -- "i_2§73" 
+"Battery System Manufacturer§69" -- "i_3§87" 
+"Battery System Manufacturer§69" -- "i_4§89" 
+"Battery System Manufacturer§69" -- "i_6§90" 
+"Battery System Manufacturer§69" -- "i_7§94" 
+"Battery System Manufacturer§69" -- "i_8§97" 
+"Battery System Manufacturer§69" -- "i_10§98" 
+"Battery System Manufacturer§69" -- "i_11§103" 
+"Battery System Manufacturer§69" -- "i_41§159" 
+"Battery System Manufacturer§69" -- "i_42§160" 
+"Battery System Manufacturer§69" -- "i_45§163" 
+"Battery System Manufacturer§69" -- "i_46§165" 
+"OEM§70" -- "i_1§68" 
+"OEM§70" -- "i_2§73" 
+"OEM§70" -- "i_7§94" 
+"OEM§70" -- "i_10§98" 
+"OEM§70" -- "i_11§103" 
+"OEM§70" -- "i_12§113" 
+"OEM§70" -- "i_26§134" 
+"OEM§70" -- "i_27§136" 
+"OEM§70" -- "i_28§137" 
+"OEM§70" -- "i_29§139" 
+"OEM§70" -- "i_31§141" 
+"OEM§70" -- "i_33§145" 
+"OEM§70" -- "i_38§155" 
+"OEM§70" -- "i_42§160" 
+"OEM§70" -- "i_45§163" 
+"action_14§71" -- "Car Owner§75" 
+"action_14§71" -- "Car dealership§76" 
+"action_29§72" -- "action_13§74" 
+"action_29§72" -- "Car Rental Service§77" 
+"action_29§72" -- "Car-Sharing Company§78" 
+"action_29§72" -- "Fleet Operator§79" 
+"action_29§72" -- "Car Leasing Provider§80" 
+"i_2§73" -- "action_14§71" 
+"i_2§73" -- "action_29§72" 
+"action_13§74" -- "Car Owner§75" 
+"action_13§74" -- "Charge-Service-Vendors§81" 
+"action_13§74" -- "Car Rental Service§77" 
+"action_13§74" -- "Car-Sharing Company§78" 
+"action_13§74" -- "Fleet Operator§79" 
+"action_13§74" -- "Car Leasing Provider§80" 
+"action_13§74" -- "Households§84" 
+"action_13§74" -- "Energy Supplier§85" 
+"Car Owner§75" -- "i_11§103" 
+"Car Owner§75" -- "i_15§119" 
+"Car Owner§75" -- "i_16§120" 
+"Car Owner§75" -- "i_17§121" 
+"Car Owner§75" -- "i_18§124" 
+"Car Owner§75" -- "i_20§126" 
+"Car Owner§75" -- "i_22§127" 
+"Car Owner§75" -- "i_24§129" 
+"Car Owner§75" -- "i_25§132" 
+"Car Owner§75" -- "i_35§149" 
+"Car Owner§75" -- "i_36§152" 
+"Car Owner§75" -- "i_40§158" 
+"Car dealership§76" -- "i_4§89" 
+"Car Rental Service§77" -- "i_11§103" 
+"Car Rental Service§77" -- "i_13§114" 
+"Car Rental Service§77" -- "i_18§124" 
+"Car Rental Service§77" -- "i_33§145" 
+"Car Rental Service§77" -- "i_35§149" 
+"Car Rental Service§77" -- "i_36§152" 
+"Car-Sharing Company§78" -- "i_11§103" 
+"Car-Sharing Company§78" -- "i_13§114" 
+"Car-Sharing Company§78" -- "i_18§124" 
+"Car-Sharing Company§78" -- "i_33§145" 
+"Car-Sharing Company§78" -- "i_35§149" 
+"Car-Sharing Company§78" -- "i_36§152" 
+"Fleet Operator§79" -- "i_11§103" 
+"Fleet Operator§79" -- "i_13§114" 
+"Fleet Operator§79" -- "i_18§124" 
+"Fleet Operator§79" -- "i_33§145" 
+"Fleet Operator§79" -- "i_35§149" 
+"Fleet Operator§79" -- "i_36§152" 
+"Car Leasing Provider§80" -- "i_11§103" 
+"Car Leasing Provider§80" -- "i_13§114" 
+"Car Leasing Provider§80" -- "i_35§149" 
+"Car Leasing Provider§80" -- "i_36§152" 
+"Charge-Service-Vendors§81" -- "i_2§73" 
+"Charge-Service-Vendors§81" -- "i_10§98" 
+"Charge-Service-Vendors§81" -- "i_11§103" 
+"Charge-Service-Vendors§81" -- "i_13§114" 
+"Charge-Service-Vendors§81" -- "i_32§143" 
+"Charge-Service-Vendors§81" -- "i_33§145" 
+"Insurance§82" -- "i_2§73" 
+"Insurance§82" -- "i_4§89" 
+"Insurance§82" -- "i_10§98" 
+"Insurance§82" -- "i_33§145" 
+"Automobile Association§83" -- "i_2§73" 
+"Automobile Association§83" -- "i_4§89" 
+"Automobile Association§83" -- "i_10§98" 
+"Automobile Association§83" -- "i_11§103" 
+"Households§84" -- "i_11§103" 
+"Households§84" -- "i_35§149" 
+"Households§84" -- "i_36§152" 
+"Energy Supplier§85" -- "i_11§103" 
+"Energy Supplier§85" -- "i_35§149" 
+"Energy Supplier§85" -- "i_36§152" 
+"Energy Supplier§85" -- "i_44§162" 
+"Energy Supplier§85" -- "i_47§167" 
+"action_15§86" -- "OEM§70" 
+"i_3§87" -- "action_15§86" 
+"action_41§88" -- "OEM§70" 
+"action_41§88" -- "Charge-Service-Vendors§81" 
+"i_4§89" -- "action_13§74" 
+"i_4§89" -- "action_41§88" 
+"i_6§90" -- "action_2§67" 
+"Car Workshop§91" -- "i_6§90" 
+"Car Workshop§91" -- "i_28§137" 
+"Car Workshop§91" -- "i_34§148" 
+"Car Workshop§91" -- "i_35§149" 
+"Car Workshop§91" -- "i_38§155" 
+"Car Workshop§91" -- "i_39§157" 
+"action_10§92" -- "action_31§93" 
+"action_10§92" -- "Cell Manufacturer§64" 
+"action_31§93" -- "Transport Service§95" 
+"i_7§94" -- "action_10§92" 
+"i_7§94" -- "action_31§93" 
+"Transport Service§95" -- "i_38§155" 
+"Transport Service§95" -- "i_39§157" 
+"action_11§96" -- "Cell Manufacturer§64" 
+"i_8§97" -- "action_11§96" 
+"i_10§98" -- "action_13§74" 
+"Vendor Aging-Quicktest§99" -- "i_10§98" 
+"Gas-Stations§100" -- "i_10§98" 
+"Gas-Stations§100" -- "i_33§145" 
+"action_37§101" -- "action_1§104" 
+"action_37§101" -- "Battery System Manufacturer§69" 
+"action_38§102" -- "action_37§101" 
+"action_38§102" -- "action_13§74" 
+"i_11§103" -- "action_2§67" 
+"i_11§103" -- "action_37§101" 
+"i_11§103" -- "action_38§102" 
+"action_1§104" -- "action_2§67" 
+"action_1§104" -- "action_8§105" 
+"action_1§104" -- "action_9§106" 
+"action_1§104" -- "action_12§62" 
+"action_1§104" -- "action_36§107" 
+"action_1§104" -- "Battery System Manufacturer§69" 
+"action_8§105" -- "action_2§67" 
+"action_8§105" -- "Battery System Manufacturer§69" 
+"action_9§106" -- "Battery System Manufacturer§69" 
+"action_36§107" -- "Battery System Manufacturer§69" 
+"General Service Vendor (e.g. TUEV)§108" -- "i_11§103" 
+"General Service Vendor (e.g. TUEV)§108" -- "i_13§114" 
+"Second Hand Car Vendor§109" -- "i_11§103" 
+"Second Hand Car Vendor§109" -- "i_36§152" 
+"Second Hand Car Vendor§109" -- "i_40§158" 
+"Second Hand Car Buyer§110" -- "i_11§103" 
+"Second Hand Car Buyer§110" -- "i_36§152" 
+"Second Hand Car Buyer§110" -- "i_37§154" 
+"Second Hand Car Buyer§110" -- "i_40§158" 
+"Second Hand Car Buyer§110" -- "i_44§162" 
+"Mediator§111" -- "i_11§103" 
+"Mediator§111" -- "i_13§114" 
+"action_3§112" -- "Battery System Manufacturer§69" 
+"action_3§112" -- "OEM§70" 
+"i_12§113" -- "action_3§112" 
+"i_13§114" -- "action_2§67" 
+"i_13§114" -- "action_13§74" 
+"i_13§114" -- "action_37§101" 
+"i_14§115" -- "action_13§74" 
+"action_17§116" -- "OEM§70" 
+"action_27§117" -- "action_1§104" 
+"action_27§117" -- "action_13§74" 
+"action_27§117" -- "Automobile Association§83" 
+"action_28§118" -- "action_1§104" 
+"action_28§118" -- "action_13§74" 
+"action_28§118" -- "Automobile Association§83" 
+"action_28§118" -- "General Service Vendor (e.g. TUEV)§108" 
+"i_15§119" -- "action_17§116" 
+"i_15§119" -- "action_27§117" 
+"i_15§119" -- "action_28§118" 
+"i_16§120" -- "action_31§93" 
+"i_17§121" -- "action_28§118" 
+"action_4§122" -- "Battery System Manufacturer§69" 
+"action_6§123" -- "Battery System Manufacturer§69" 
+"action_6§123" -- "OEM§70" 
+"i_18§124" -- "action_13§74" 
+"i_18§124" -- "action_9§106" 
+"i_18§124" -- "action_4§122" 
+"i_18§124" -- "action_6§123" 
+"action_7§125" -- "Battery System Manufacturer§69" 
+"i_20§126" -- "action_6§123" 
+"i_20§126" -- "action_4§122" 
+"i_20§126" -- "action_7§125" 
+"i_22§127" -- "action_17§116" 
+"action_26§128" -- "action_2§67" 
+"action_26§128" -- "action_34§130" 
+"action_26§128" -- "Recycling-/Reuse company§65" 
+"i_24§129" -- "action_26§128" 
+"action_34§130" -- "Government§66" 
+"action_24§131" -- "action_13§74" 
+"action_24§131" -- "action_29§72" 
+"action_24§131" -- "Insurance§82" 
+"i_25§132" -- "action_24§131" 
+"action_35§133" -- "action_2§67" 
+"action_35§133" -- "Battery System Manufacturer§69" 
+"i_26§134" -- "action_35§133" 
+"action_16§135" -- "action_3§112" 
+"i_27§136" -- "action_16§135" 
+"i_28§137" -- "action_9§106" 
+"i_28§137" -- "action_4§122" 
+"i_29§139" -- "action_42§138" 
+"Wholesaler§140" -- "i_29§139" 
+"i_31§141" -- "action_34§130" 
+"action_20§142" -- "OEM§70" 
+"action_20§142" -- "Charge-Service-Vendors§81" 
+"i_32§143" -- "action_20§142" 
+"action_25§144" -- "action_13§74" 
+"action_25§144" -- "Car Owner§75" 
+"i_33§145" -- "action_25§144" 
+"Data-Collector§146" -- "i_33§145" 
+"Hacker and Criminals§147" -- "i_33§145" 
+"i_34§148" -- "action_8§105" 
+"i_34§148" -- "action_9§106" 
+"i_34§148" -- "action_12§62" 
+"i_34§148" -- "action_36§107" 
+"i_35§149" -- "action_13§74" 
+"i_35§149" -- "action_4§122" 
+"i_35§149" -- "action_42§138" 
+"action_0§150" -- "action_2§67" 
+"action_0§150" -- "action_8§105" 
+"action_0§150" -- "action_9§106" 
+"action_0§150" -- "action_12§62" 
+"action_0§150" -- "action_37§101" 
+"action_0§150" -- "action_13§74" 
+"action_0§150" -- "Vendor Aging-Quicktest§99" 
+"action_0§150" -- "General Service Vendor (e.g. TUEV)§108" 
+"action_23§151" -- "Charge-Service-Vendors§81" 
+"action_23§151" -- "Energy Supplier§85" 
+"i_36§152" -- "action_0§150" 
+"i_36§152" -- "action_11§96" 
+"i_36§152" -- "action_13§74" 
+"i_36§152" -- "action_4§122" 
+"i_36§152" -- "action_23§151" 
+"action_33§153" -- "Car Workshop§91" 
+"i_37§154" -- "action_13§74" 
+"i_37§154" -- "action_33§153" 
+"i_38§155" -- "action_13§74" 
+"Rescue Service§156" -- "i_38§155" 
+"i_39§157" -- "action_13§74" 
+"i_40§158" -- "action_0§150" 
+"i_41§159" -- "action_26§128" 
+"i_42§160" -- "action_29§72" 
+"action_30§161" -- "action_13§74" 
+"action_30§161" -- "Hacker and Criminals§147" 
+"i_44§162" -- "action_30§161" 
+"i_45§163" -- "action_1§104" 
+"action_32§164" -- "Transport Service§95" 
+"i_46§165" -- "action_32§164" 
+"action_22§166" -- "Charge-Service-Vendors§81" 
+"action_22§166" -- "Gas-Stations§100" 
+"i_47§167" -- "action_29§72" 
+"i_47§167" -- "action_22§166" 
+"i_47§167" -- "action_38§102" 
+}
