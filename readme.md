@@ -6,7 +6,7 @@ During the work on the paper [info comming], a fair amount of data accumulated. 
 
 Following the link, you will get to a website showing the whole dataset in a vis.js graph.
 
-[>>Open network on github pages<<](https://merklel.github.io/stakeholder-digital-battery-twin/index.html)
+[>>Open network on github pages<<](https://tumftm.github.io/stakeholder-digital-battery-twin/index.html)
 
 
 ## Paper
