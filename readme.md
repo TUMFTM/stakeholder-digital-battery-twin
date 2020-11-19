@@ -2,7 +2,7 @@
 
 ![header_img](images/network.png)
 
-During the work on the paper [info comming], a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository. 
+During the work on the paper *Stakeholder Analysis of Digital Twins for Battery Systems* for presentation at EVER2020, a fair amount of data accumulated. Not all information made its way into the paper. To supplement the information and show the full database, we created this repository. 
 
 Following the link, you will get to a website showing the whole dataset in a vis.js graph.
 
