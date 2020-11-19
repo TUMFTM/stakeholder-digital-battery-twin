@@ -10,6 +10,9 @@ Following the link, you will get to a website showing the whole dataset in a vis
 
 
 ## Publication
+
+`10.1109/EVER48776.2020.9242960`
+
 [Stakeholder Analysis of Digital Twins for Battery Systems at EVER2020](https://doi.org/10.1109/EVER48776.2020.9242960)
 
 ### Citation
