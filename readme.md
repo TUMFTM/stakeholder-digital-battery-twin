@@ -9,7 +9,7 @@ Following the link, you will get to a website showing the whole dataset in a vis
 [>>Open network on github pages<<](https://tumftm.github.io/stakeholder-digital-battery-twin/index.html)
 
 
-## Paper
+## Publication
 [Stakeholder Analysis of Digital Twins for Battery Systems at EVER2020](https://doi.org/10.1109/EVER48776.2020.9242960)
 
 ### Citation
